@@ -1,19 +1,17 @@
 package com.fastcodetricks.javaspringapi.entrypoint.model;
 
-import java.util.Objects;
-
 public class User {
 
-    private final Long userId;
+    private final Long id;
     private final String name;
 
-    public User(Long userId, String name) {
-        this.userId = userId;
+    public User(Long id, String name) {
+        this.id = id;
         this.name = name;
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
@@ -23,7 +21,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
     }

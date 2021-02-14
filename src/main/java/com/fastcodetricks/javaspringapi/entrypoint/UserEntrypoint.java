@@ -12,7 +12,7 @@ import java.util.Map;
 public class UserEntrypoint {
 
     private Map<Long, User> users = Map.of(
-            1L, new User(1L, "Peter"),
+        1L, new User(1L, "Peter"),
             2L, new User(2L, "John")
     );
 
@@ -41,11 +41,9 @@ public class UserEntrypoint {
         return users.get(userId).toString();
     }
 
-    @GetMapping(value= "/{userId}/text")
+    @GetMapping(value= "/{userId}/bytes")
     public byte[] getUserBytes(@PathVariable Long userId) {
         return users.get(userId).toString().getBytes();
     }
-
-
 
 }
